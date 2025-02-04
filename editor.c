@@ -312,7 +312,7 @@ void editorRefreshScreen() {
     abAppend(&ab, "\x1b[?25l", 6);
 
     // \x1b is the byte that represent the escape character
-    // H is meant to position the cursor on the terminal, by default, at 1:1
+    // H is meant to position the cursor on the terminal, by default, at 1:1https://github.com/Galaktik-hub/text-editor.git
     abAppend(&ab, "\x1b[H", 3);
 
     editorDrawRows(&ab);
@@ -345,6 +345,8 @@ void editorMoveCursor(int key) {
         case ARROW_RIGHT:
             if (row && E.cx < row->size)
                 E.cx++;
+            else
+                E.cx = 0;
             break;
         case ARROW_UP:
             if (E.cy != 0) 
