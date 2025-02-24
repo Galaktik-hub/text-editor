@@ -313,7 +313,7 @@ void editorUpdateSyntax(erow *row) {
         if (mcs_len && mce_len && !in_string) {
             if (in_comment) {
                 row->hl[i] = HL_COMMENT;
-                if (!strncmp(&row->hl[i], HL_MLCOMMENT, mce_len)) {
+                if (!strncmp(&row->render[i], mce, mce_len)) {
                     memset(&row->hl[i], HL_MLCOMMENT, mce_len);
                     i += mce_len;
                     in_comment = 0;
