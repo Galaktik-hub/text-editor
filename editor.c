@@ -17,7 +17,7 @@
 
 /*** defines ***/
 
-#define CONFEDIT_VERSION "0.0.1"
+#define TEXTEDIT_VERSION "1.0.0"
 
 #define TAB_STOP 4
 
@@ -790,7 +790,7 @@ void editorDrawRows(struct abuf *ab) {
             if (E.numrows == 0 && y == E.screenrows / 3) {
                 char welcome[80];
                 int welcomelen = snprintf(welcome, sizeof(welcome),
-                    "EditConfig -- version %s", CONFEDIT_VERSION);
+                    "TextEdit -- version %s", TEXTEDIT_VERSION);
 
                 if (welcomelen > E.screencols) welcomelen = E.screencols;
 
